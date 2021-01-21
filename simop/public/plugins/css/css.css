@@ -1,0 +1,60 @@
+/* Open Sans Light */
+@font-face{
+    font-family: 'Open Sans Light';
+    font-style: normal;
+    font-weight: 400;
+    src:
+            url(fonts/OpenSans/Light/OSL.eot)format('eot'),
+            url(fonts/OpenSans/Light/OSL.ttf)format('ttf'),
+            url(fonts/OpenSans/Light/OSL.woff)format('woff'),
+            url(fonts/OpenSans/Light/OSL.woff2)format('woff2');
+}
+
+/* Roboto */
+@font-face{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src:
+            url(fonts/Roboto/Roboto-Light.eot)format('eot'),
+            url(fonts/Roboto/Roboto-Light.ttf)format('ttf'),
+            url(fonts/Roboto/Roboto-Light.woff)format('woff'),
+            url(fonts/Roboto/Roboto-Light.woff2)format('woff2');
+}
+
+/* Open Sans Variant's Class's */
+.os-light{
+    font-family: "Open Sans Light", sans-serif !important;
+}
+
+/* Verdana Class */
+.roboto{
+    font-family: Roboto, sans-serif !important;
+}
+
+/* Cursor Pointer */
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+html, body{
+    font-family: Roboto, sans-serif !important;
+}
+
+#sample4:focus, #sample5:focus{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+    
+#sample3:focus, #sample4:focus, #sample5:focus, #buscador:focus, #password-confirm:focus, #sample-password:focus, #sample-mail:focus{
+    border-bottom: none;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.XYZ{
+    background: rgba(0,0,0,0.4);
+}

@@ -1,0 +1,2 @@
+<button id="btn-back" type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="window.location.href = '@yield('BackAction')'"><i class="material-icons">keyboard_backspace</i></button>
+<div class="mdl-tooltip" for="btn-back">Regresar</div>

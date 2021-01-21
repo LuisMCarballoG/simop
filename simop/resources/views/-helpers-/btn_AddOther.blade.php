@@ -1,0 +1,2 @@
+<button id="btn-add-distrito-{{ $i->id }}" onclick="window.location.href = '@yield('AddOtherAction'.$i->id)'" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons mdl-color-text--green">add</i></button>
+<div class="mdl-tooltip" data-mdl-for="btn-add-distrito-{{ $i->id }}">Agregar @yield('Name'.$i->id)</div>

@@ -1,0 +1,1 @@
+<button onclick="window.location.href = '@yield('btn-AddAction')'" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color--blue mdl-color-text--white">Agregar</button>
