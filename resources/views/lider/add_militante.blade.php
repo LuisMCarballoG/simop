@@ -6,7 +6,7 @@
             <h6 style="color: rgba(0,0,0,0.44); font-size: 15px;">{{ $L->colonia->seccion->municipio->name }} - {{ $L->colonia->seccion->municipio->name }} - {{ $L->colonia->seccion->municipio->name }} - {{ $L->colonia->seccion->municipio->distrito->name }} - {{ $L->colonia->seccion->municipio->distrito->estado->name }} - {{ $L->colonia->seccion->municipio->distrito->anio->name }}</h6>
         </div>
         @include('-helpers-.errors')
-        <form action="{{ route('lideres.StoreMilitante', $L->id) }}" method="POST" class="mdl-cell mdl-cell--12-col">
+        <form action="{{ route('lider.StoreMilitante', $L->id) }}" method="POST" class="mdl-cell mdl-cell--12-col">
             @include('-helpers-.error')
             @method('PUT')
             @csrf
@@ -36,7 +36,7 @@
                 <label class="mdl-textfield__label" for="sample5">Dirección...</label>
             </div>
 
-            @section('BackAction', route('lideres.index'))
+            @section('BackAction', route('lider.index'))
             @include('-helpers-.btn_Back')
 
             @include('-helpers-.btn_Submit')

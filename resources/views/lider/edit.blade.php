@@ -5,7 +5,7 @@
             <h5>{{ $L->name }}</h5>
         </div>
         @include('-helpers-.errors')
-        <form action="{{ route('lideres.update', $L->id) }}" method="POST" class="mdl-cell mdl-cell--12-col">
+        <form action="{{ route('lider.update', $L->id) }}" method="POST" class="mdl-cell mdl-cell--12-col">
             @include('-helpers-.error')
             @method('PUT')
             @csrf
@@ -35,7 +35,7 @@
                 <label class="mdl-textfield__label" for="sample5">Dirección...</label>
             </div>
 
-            @section('BackAction', route('lideres.index'))
+            @section('BackAction', route('lider.index'))
             @include('-helpers-.btn_Back')
 
             @include('-helpers-.btn_Submit')
