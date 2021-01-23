@@ -122,12 +122,10 @@ class SeccionController extends Controller
 
     public function destroy($id)
     {
-        if (Auth::user()->master == 'Y' || Auth::user()->borrar == 'Y'){
             $Sec = Seccion::find($id);
             Historial::create(['user_id'=>Auth::user()->id, 'movimiento'=>'Sección eliminada: <b>'.$Sec->name.'</b>; Perteneciente al municipio de: <b>'.$Sec->municipio->name.'</b>.','fecha'=>FC::FechaInstante()]);
             $Sec->delete();
             return redirect()->route('secciones.index')->with('ok', 'Registro eliminado exitosamente.');
-        }
-        return abort(404);
+        
     }
 }

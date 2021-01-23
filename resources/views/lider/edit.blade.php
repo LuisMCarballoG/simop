@@ -3,7 +3,6 @@
     <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell--4-offset mdl-cell mdl-cell--4-col mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">
             <h5>{{ $L->name }}</h5>
-            <!--<h6 style="color: rgba(0,0,0,0.44); font-size: 15px;">Sección #{{ $L->colonia->seccion->name }} - {{ $L->colonia->seccion->municipio->name }} - {{ $L->colonia->seccion->municipio->distrito->name }} - {{ $L->colonia->seccion->municipio->distrito->estado->name }} -  ({{ $L->colonia->seccion->municipio->distrito->anio->name }})</h6>-->
         </div>
         @include('-helpers-.errors')
         <form action="{{ route('lideres.update', $L->id) }}" method="POST" class="mdl-cell mdl-cell--12-col">
@@ -11,7 +10,6 @@
             @method('PUT')
             @csrf
 
-            <!--input type="hidden" name="anio" value="{{ $L->colonia->seccion->municipio->distrito->anio->id }}"-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input" type="text" id="sample3" name="name" required value="{{ old('name', $L->name) }}" pattern="[A-ZÁ-Ú-a-zá-ú ]{3,150}">
                 <label class="mdl-textfield__label" for="sample3">Nombre...</label>

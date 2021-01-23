@@ -67,21 +67,18 @@ class MunicipioController extends Controller
 
     public function edit($id)
     {
-        return abort(404);
-        if (Auth::user()->master == 'Y' || Auth::user()->editar == 'Y'){
+        
             $M = Municipio::find($id);
             if (!$M){
                 return redirect()->route('municipio.index')->with('error', 'El municipio que busca no ha sido encontado');
             }
             return view('municipio.edit')->with('M', $M);
-        }
+        
         return abort(404);
     }
 
     public function update(Request $request, $id)
     {
-        return abort(404);        
-        if (Auth::user()->master == 'Y' || Auth::user()->editar == 'Y'){
             $M = Municipio::find($id);
             if ($M->name == $r->name){
                 return redirect()->route('municipio.edit', $id)->withInput()->with('error', 'Debe modificar por lo menos un campo para poder actualizar la información.');
@@ -117,14 +114,11 @@ class MunicipioController extends Controller
             $M->updated_at = $Fi;
             $M->save();
             return redirect()->route('municipio.index')->with('ok', 'Municipio actualizado exitosamente.');
-        }
-        return abort(404);
+        
     }
 
     public function destroy($id)
     {
-        return abort(404);
-         if (Auth::user()->master == 'Y' || Auth::user()->borrar == 'Y'){
             $M = Municipio::find($id);
             Historial::create([
                 'user_id'=>Auth::user()->id,
@@ -132,8 +126,7 @@ class MunicipioController extends Controller
                 'fecha'=>FC::Instante()]);
             $M->delete();
             return redirect()->route('municipio.index')->with('ok', 'Municipio eliminado exitosamente.');
-        }
-        return abort(404);
+       
     }
 
     /**

@@ -17,7 +17,7 @@ class MilitanteController extends Controller
      * @return void
      */
     public function __construct()
-    {return abort(404);
+    {
         $this->middleware('auth');
     }
 
@@ -38,10 +38,8 @@ class MilitanteController extends Controller
      */
     public function create()
     {
-        if (Auth::user()->master == 'Y' || Auth::user()->crear == 'Y'){
             return view('militante.add');
-        }
-        return abort(404);
+        
     }
 
     /**
@@ -52,7 +50,6 @@ class MilitanteController extends Controller
      */
     public function store(Request $request)
     {
-        if (Auth::user()->master == 'Y' || Auth::user()->crear == 'Y'){
             $regla = [
                 'name' => 'required|string|max:150|min:3',
                 'apa' => 'required|string|max:150|min:3',
@@ -107,8 +104,7 @@ class MilitanteController extends Controller
                          <a href="'.route('militantes.show', $MilId[0]->id).'">Ver</a>';
             Historial::create(['user_id'=>Auth::user()->id, 'movimiento'=>$Mensaje,'fecha'=>$Fi]);
             return redirect()->route('militantes.index')->with('ok', 'Militante registrado exitosamente.');
-        }
-        return abort(404);
+        
     }
 
     /**
@@ -134,14 +130,12 @@ class MilitanteController extends Controller
      */
     public function edit($id)
     {
-        if (Auth::user()->master == 'Y' || Auth::user()->editar == 'Y'){
             $Mil = Militante::find($id);
             if (!$Mil){
                 return redirect()->route('militantes.index')->with('error', 'El militante que busca no ha sido encontrado.');
             }
             return view('militante.edit')->with('M', $Mil);
-        }
-        return abort(404);
+        
     }
 
     /**
@@ -153,7 +147,6 @@ class MilitanteController extends Controller
      */
     public function update(Request $request, $id)
     {
-         if (Auth::user()->master == 'Y' || Auth::user()->editar == 'Y'){
             $regla = [
                 'name' => 'required|string|max:150|min:3',
                 'apa' => 'required|string|max:150|min:3',
@@ -225,8 +218,7 @@ class MilitanteController extends Controller
             $Mensaje = $Mensaje.'<a href="'.route('militantes.show', $id).'">Ver</a>';
             Historial::create(['user_id'=>Auth::user()->id,'movimiento'=>$Mensaje,'fecha'=>$Fi]);
             return redirect()->route('militantes.index')->with('ok', 'El militante ha sido actualizado exitosamente.');
-        }
-        return abort(404);
+       
     }
 
     /**
@@ -237,13 +229,11 @@ class MilitanteController extends Controller
      */
     public function destroy($id)
     {
-        if (Auth::user()->master == 'Y' || Auth::user()->borrar == 'Y'){
             $Mil = Militante::find($id);
             Historial::create(['user_id'=>Auth::user()->id,
                 'movimiento'=>'Militante eliminado: <b>'.$Mil->name.' '.$Mil->apat.' '.$Mil->amat.'</b>; Adjunto al lider <b>'.$Mil->lider->name.' '.$Mil->lider->apat.' '.$Mil->lider->amat.'</b>.', 'fecha'=>FC::FechaInstante()]);
             $Mil->delete();
             return redirect()->route('militantes.index')->with('ok', 'El militante ha sido eliminado exitosamente.');
-        }
-        return abort(404);
+        
     }
 }

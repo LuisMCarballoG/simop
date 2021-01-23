@@ -5,10 +5,9 @@
         @if(count($e) > 0)
             @include('-helpers-.inpt_SearchInTable')
         @endif
-        @if(Auth::user()->master == 'Y' || Auth::user()->crear == 'Y')
             @section('btn-AddAction', route('militante.create'))
             @include('-helpers-.btn_AddNew')
-        @endif
+        
         <div class="mdl-cell mdl-cell--12-col">
             @include('-helpers-.error')
             @include('-helpers-.ok')
@@ -38,16 +37,12 @@
                                     @include('-helpers-.btn_ShowMore')
                                     -->
 
-                                    @if(Auth::user()->master == 'Y' || Auth::user()->editar == 'Y')
                                         @section('EditAction'.$i->id, route('militante.edit', $i->id))
                                         @include('-helpers-.btn_Edit')
-                                    @endif
 
-                                    @if(Auth::user()->master == 'Y' || Auth::user()->borrar == 'Y')
                                         @section('msg-ToDelete'.$i->id, 'a <b>'.$i->name.' '.$i->apat.' '.$i->amat.'</b>')
                                         @section('form-ActionDelete'.$i->id, route('militante.destroy', $i->id))
                                         @include('-helpers-.btn_Delete')
-                                    @endif
                                 </td>
                             </tr>
                         @endforeach
