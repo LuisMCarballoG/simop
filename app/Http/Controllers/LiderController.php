@@ -81,7 +81,7 @@ class LiderController extends Controller
     
     public function show($id)
     {
-        return abort(404);
+        //return abort(404);
         $Lid = Lider::find($id);
         if (!$Lid){
             return redirect()->route('lideres.index')->with('error', 'El lider que busca no ha sido encontrado.');
@@ -91,19 +91,19 @@ class LiderController extends Controller
 
     public function edit($id)
     {
-        if (Auth::user()->master == 'Y' || Auth::user()->editar == 'Y'){
+        //if (Auth::user()->master == 'Y' || Auth::user()->editar == 'Y'){
             $Lid = Lider::find($id);
             if (!$Lid){
                 return redirect()->route('lideres.index')->with('error', 'El lider que busca no ha sido encontrado.');
             }
             return view('lider.edit')->with('L', $Lid);
-        }
-        return abort(404);
+        //}
+        //return abort(404);
     }
 
     public function update(Request $request, $id)
     {
-        if (Auth::user()->master == 'Y' || Auth::user()->editar == 'Y'){
+        //if (Auth::user()->master == 'Y' || Auth::user()->editar == 'Y'){
             $R = [
                 'name' => 'required|string|max:150|min:3',
                 'apa' => 'required|string|max:150|min:3',
@@ -153,19 +153,19 @@ class LiderController extends Controller
             $L->save();
             Historial::create(['user_id'=>Auth::user()->id, 'movimiento'=>$Men.' <a href="'.route('lideres.show', $id).'">Ver</a>', 'fecha'=>$F]);
             return redirect()->route('lideres.index')->with('ok', 'El lider ha sido actualizado exitosamente.');
-        }
-        return abort(404);
+        //}
+        //return abort(404);
     }
 
    
     public function destroy($id)
     {
-         if (Auth::user()->master == 'Y' || Auth::user()->borrar == 'Y'){
+         //if (Auth::user()->master == 'Y' || Auth::user()->borrar == 'Y'){
             $Lid = Lider::find($id);
             Historial::create(['user_id'=>Auth::user()->id,'movimiento'=>'Lider eliminado: <b>'.$Lid->name.' '.$Lid->apat.' '.$Lid->amat.'</b>; Perteneciente a la colonia <b>'.$Lid->colonia->name.'</b>.', 'fecha'=>FC::FechaInstante()]);
             $Lid->delete();
             return redirect()->route('lideres.index')->with('ok', 'El lider ha sido eliminado exitosamente.');
-        }
-        return abort(404);
+        //}
+        //return abort(404);
     }
 }
