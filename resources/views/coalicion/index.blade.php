@@ -35,7 +35,7 @@
                                 </td>
                                 <td>
                                     @foreach($i->partidos as $P)
-                                        <img src="simop/storage/app/public/{{ $P->foto }}" width="20" height="20" alt="Logo" id="foto_{{ $i->id }}_{{ $P->id }}">
+                                        <img src="{{ env('APP_URL') }}storage/app/public/{{ $P->foto }}" width="20" height="20" alt="Logo" id="foto_{{ $i->id }}_{{ $P->id }}">
                                         <div class="mdl-tooltip" data-mdl-for="foto_{{ $i->id }}_{{ $P->id }}">
                                             {{ $P->name }}
                                         </div>

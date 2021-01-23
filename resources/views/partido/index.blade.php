@@ -28,7 +28,7 @@
                                 <td>
                                     <a href="{{ route('partido.show', $i->id) }}" id="partido{{ $i->id }}">
                                         @if($i->foto != '')
-                                            <img src="simop/storage/app/public/{{ $i->foto }}" width="20" height="20" alt="Logo">
+                                            <img src="{{ env('APP_URL') }}storage/app/public/{{ $i->foto }}" width="20" height="20" alt="Logo">
                                         @endif
 
                                         <span>
