@@ -7,14 +7,14 @@
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
         <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <meta name="csrf-token"             content="{{ csrf_token() }}">
-        <meta property="og:url"             content="https://candymanx.com/simop" />
+        <!--meta property="og:url"             content="https://candymanx.com/simop" />
         <meta property="og:type"            content="product" />
         <meta property="og:locale"          content="es_MX" />
         <meta property="og:title"           content="Sistemas a medida para el monitoreo, almacenamiento y computación de datos." />
-        <meta property="og:description"     content="Los problemas comunes con apariencia dificultosa se pueden eliminar con una plataforma de apoyo para tu negocio." />
+        <meta property="og:description"     content="Los problemas comunes con apariencia dificultosa se pueden eliminar con una plataforma de apoyo para tu negocio." /-->
         <meta property="og:image"           content="https://candymanx.com/simop/simop/public/plugins/img/SIMOP-G.png" />
         <meta property="og:site_name"       content="CandyManX - SIMOP" />
-        <meta property="article:published_time" content="2018-06-09T05:59:00+01:00" />
+        <!--meta property="article:published_time" content="2018-06-09T05:59:00+01:00" />
         <meta property="article:modified_time" content="2018-06-09T19:08:47+01:00" />
         <meta property="article:section"    content="Sección del artículo" />
         <meta property="article:tag"        content="Etiqueta del artículo" />
@@ -30,7 +30,7 @@
 
         <meta itemprop="name"               content="CandyManX">
         <meta itemprop="description"        content="Los problemas comunes con apariencia dificultosa se pueden eliminar con una plataforma de apoyo para tu negocio.">
-        <meta itemprop="image"              content="https://candymanx.com/simop/simop/public/plugins/img/SIMOP-G.png">
+        <meta itemprop="image"              content="https://candymanx.com/simop/simop/public/plugins/img/SIMOP-G.png"-->
 
         <link rel="icon" type="image/png" href="{{ env('LOGO') }}"/>
         <link rel="shortcut icon" type="image/x-icon" href="{{ env('LOGO') }}"/>
