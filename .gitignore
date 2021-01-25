@@ -14,3 +14,7 @@ yarn-error.log
 *.env.txt
 /show_mun.blade.php
 /index.blade.php
+/database
+/simop
+/tests
+simop.sql
