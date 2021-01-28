@@ -157,7 +157,7 @@
             options: {
                 title: {
                     display: true,
-                    text: 'Votos por Partido'
+                    text: 'Votos por Coalición'
                 },
                 scales: {
                     xAxes: [{
