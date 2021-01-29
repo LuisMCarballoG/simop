@@ -91,14 +91,6 @@
                         <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">transform</i>Coaliciones
                     </a>
 
-                    <a id="a-municipios" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('municipio.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">crop_free</i>Municipios
-                    </a>
-
-                    <a id="a-secciones" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('seccion.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">extension</i>Secciones
-                    </a>
-
                     <a id="a-lideres" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('lider.index') }}">
                         <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin</i>Activistas
                     </a>
@@ -109,6 +101,18 @@
 
                     <a id="a-eleccion" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('elecciones.index') }}">
                         <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">how_to_vote</i>Resultados
+                    </a>
+
+                    <a id="a-secciones" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('seccion.index') }}">
+                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">extension</i>Casillas
+                    </a>
+
+                    <a id="a-secciones" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('seccion.index') }}">
+                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">extension</i>Secciones
+                    </a>
+
+                    <a id="a-municipios" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('municipio.index') }}">
+                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">crop_free</i>Municipios
                     </a>
                 </nav>
             </div>
