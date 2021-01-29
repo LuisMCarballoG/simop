@@ -38,7 +38,7 @@
 
         $cssMicons = "mdl-color-text--blue-grey-400 material-icons";
         $cssNavLinks = "mdl-navigation__link mdl-color-text--blue-grey-600";
-        $dinamicIcon = 'class="{{ $cssMicons }}" role="presentation"';
+        $dinamicIcon = 'class="'.{{ $cssMicons }}.'" role="presentation"';
 
         ?>
 
