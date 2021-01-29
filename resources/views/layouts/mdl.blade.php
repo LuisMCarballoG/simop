@@ -86,7 +86,7 @@
                     </a>
 
                     <a id="a-eleccion" class="{{ $cssNavLinks }}" href="{{ route('elecciones.index') }}">
-                        <i {{ $dinamicIcon }}>how_to_vote</i>Resultados
+                        <i {{ $dinamicIcon }}>query_stats</i>Resultados
                     </a>
 
                     <a id="a-lideres" class="{{ $cssNavLinks }}" href="{{ route('lider.index') }}">
