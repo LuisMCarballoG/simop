@@ -34,7 +34,13 @@
         <meta itemprop="name"               content="CandyManX">
         <meta itemprop="description"        content="Los problemas comunes con apariencia dificultosa se pueden eliminar con una plataforma de apoyo para tu negocio.">
         <meta itemprop="image"              content="https://candymanx.com/simop/simop/public/plugins/img/SIMOP-G.png"-->
-        */?>
+        */
+
+        $cssMicons = "mdl-color-text--blue-grey-400 material-icons";
+        $cssNavLinks = "mdl-navigation__link mdl-color-text--blue-grey-600";
+        $dinamicIcon = 'class="{{ $cssMicons }}" role="presentation"';
+
+        ?>
 
         <link rel="icon" type="image/png" href="{{ env('LOGO') }}"/>
         <link rel="shortcut icon" type="image/x-icon" href="{{ env('LOGO') }}"/>
@@ -75,44 +81,44 @@
             </header>
             <div class="demo-drawer mdl-layout__drawer">
                 <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-900">
-                    <a id="a-inicio" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('home') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">equalizer</i>Historico
+                    <a id="a-inicio" class="{{ $cssNavLinks }}" href="{{ route('home') }}">
+                        <i {{ $dinamicIcon }}>equalizer</i>Historico
                     </a>
 
-                    <a id="a-eleccion" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('elecciones.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">how_to_vote</i>Resultados
+                    <a id="a-eleccion" class="{{ $cssNavLinks }}" href="{{ route('elecciones.index') }}">
+                        <i {{ $dinamicIcon }}>how_to_vote</i>Resultados
                     </a>
 
-                    <a id="a-lideres" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('lider.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person_pin</i>Activistas
+                    <a id="a-lideres" class="{{ $cssNavLinks }}" href="{{ route('lider.index') }}">
+                        <i {{ $dinamicIcon }}>person_pin</i>Activistas
                     </a>
 
-                    <a id="a-addsc" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('adscritos.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group_add</i>Simpatizantes
+                    <a id="a-addsc" class="{{ $cssNavLinks }}" href="{{ route('adscritos.index') }}">
+                        <i {{ $dinamicIcon }}>group_add</i>Simpatizantes
                     </a>
 
-                    <a id="a-partido" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('partido.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">outlined_flag</i>Partidos
+                    <a id="a-partido" class="{{ $cssNavLinks }}" href="{{ route('partido.index') }}">
+                        <i {{ $dinamicIcon }}>outlined_flag</i>Partidos
                     </a>
 
-                    <a id="a-coalicion" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('coalicion.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">transform</i>Coaliciones
+                    <a id="a-coalicion" class="{{ $cssNavLinks }}" href="{{ route('coalicion.index') }}">
+                        <i {{ $dinamicIcon }}>transform</i>Coaliciones
                     </a>
 
-                    <a id="a-secciones" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('seccion.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">extension</i>Casillas
+                    <a id="a-secciones" class="{{ $cssNavLinks }}" href="{{ route('seccion.index') }}">
+                        <i {{ $dinamicIcon }}>how_to_vote</i>Casillas
                     </a>
 
-                    <a id="a-secciones" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('seccion.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">extension</i>Secciones
+                    <a id="a-secciones" class="{{ $cssNavLinks }}" href="{{ route('seccion.index') }}">
+                        <i {{ $dinamicIcon }}>extension</i>Secciones
                     </a>
 
-                    <a id="a-municipios" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('municipio.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">crop_free</i>Municipios
+                    <a id="a-municipios" class="{{ $cssNavLinks }}" href="{{ route('municipio.index') }}">
+                        <i {{ $dinamicIcon }}>crop_free</i>Municipios
                     </a>
 
-                    <a id="a-anios" class=" hidden mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('anio.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">timeline</i>Años
+                    <a id="a-anios" class=" hidden {{ $cssNavLinks }}" href="{{ route('anio.index') }}">
+                        <i {{ $dinamicIcon }}>timeline</i>Años
                     </a>
                 </nav>
             </div>
