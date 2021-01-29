@@ -14,6 +14,7 @@ class Seccion extends Model
         'id',
         'municipio_id',
         'name',
+        'lista_nominal'
     ];
 
     public function municipio(){

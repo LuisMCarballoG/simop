@@ -38,7 +38,7 @@
 
         $cssMicons = "mdl-color-text--blue-grey-400 material-icons";
         $cssNavLinks = "mdl-navigation__link mdl-color-text--blue-grey-600";
-        $dinamicIcon = 'class="'. $cssMicons .'" role="presentation"';
+        $dinamicIcon = 'class=&quot;'.$cssMicons.'&quot; role="presentation"';
 
         ?>
 
@@ -82,43 +82,43 @@
             <div class="demo-drawer mdl-layout__drawer">
                 <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-900">
                     <a id="a-inicio" class="{{ $cssNavLinks }}" href="{{ route('home') }}">
-                        <i {{ $dinamicIcon }}>equalizer</i>Historico
+                        <i class="{{ $cssMicons }}" role="presentation">equalizer</i>Historico
                     </a>
 
                     <a id="a-eleccion" class="{{ $cssNavLinks }}" href="{{ route('elecciones.index') }}">
-                        <i {{ $dinamicIcon }}>query_stats</i>Resultados
+                        <i class="{{ $cssMicons }}" role="presentation">query_stats</i>Resultados
                     </a>
 
                     <a id="a-lideres" class="{{ $cssNavLinks }}" href="{{ route('lider.index') }}">
-                        <i {{ $dinamicIcon }}>person_pin</i>Activistas
+                        <i class="{{ $cssMicons }}" role="presentation">person_pin</i>Activistas
                     </a>
 
                     <a id="a-addsc" class="{{ $cssNavLinks }}" href="{{ route('adscritos.index') }}">
-                        <i {{ $dinamicIcon }}>group_add</i>Simpatizantes
+                        <i class="{{ $cssMicons }}" role="presentation">group_add</i>Simpatizantes
                     </a>
 
                     <a id="a-partido" class="{{ $cssNavLinks }}" href="{{ route('partido.index') }}">
-                        <i {{ $dinamicIcon }}>outlined_flag</i>Partidos
+                        <i class="{{ $cssMicons }}" role="presentation">outlined_flag</i>Partidos
                     </a>
 
                     <a id="a-coalicion" class="{{ $cssNavLinks }}" href="{{ route('coalicion.index') }}">
-                        <i {{ $dinamicIcon }}>transform</i>Coaliciones
+                        <i class="{{ $cssMicons }}" role="presentation">transform</i>Coaliciones
                     </a>
 
                     <a id="a-secciones" class="{{ $cssNavLinks }}" href="{{ route('seccion.index') }}">
-                        <i {{ $dinamicIcon }}>how_to_vote</i>Casillas
+                        <i class="{{ $cssMicons }}" role="presentation">how_to_vote</i>Casillas
                     </a>
 
                     <a id="a-secciones" class="{{ $cssNavLinks }}" href="{{ route('seccion.index') }}">
-                        <i {{ $dinamicIcon }}>extension</i>Secciones
+                        <i class="{{ $cssMicons }}" role="presentation">extension</i>Secciones
                     </a>
 
                     <a id="a-municipios" class="{{ $cssNavLinks }}" href="{{ route('municipio.index') }}">
-                        <i {{ $dinamicIcon }}>crop_free</i>Municipios
+                        <i class="{{ $cssMicons }}" role="presentation">crop_free</i>Municipios
                     </a>
 
                     <a id="a-anios" class=" hidden {{ $cssNavLinks }}" href="{{ route('anio.index') }}">
-                        <i {{ $dinamicIcon }}>timeline</i>Años
+                        <i class="{{ $cssMicons }}" role="presentation">timeline</i>Años
                     </a>
                 </nav>
             </div>

@@ -11,7 +11,8 @@ class CreateSeccionesTable extends M
         S::create('seccion', function (B $t) {
             $t->increments('id');
             $t->integer('municipio_id')->unsigned();
-            $t->integer('name')->unique();
+            $t->integer('name');
+            $t->integer('lista_nominal');
             $t->foreign('municipio_id')->references('id')->on('municipio')->onDelete('cascade');
         });
     }
