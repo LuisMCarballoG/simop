@@ -79,16 +79,8 @@
                         <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">equalizer</i>Historico
                     </a>
 
-                    <a id="a-anios" class=" hidden mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('anio.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">timeline</i>Años
-                    </a>
-
-                    <a id="a-partido" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('partido.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">outlined_flag</i>Partidos
-                    </a>
-
-                    <a id="a-coalicion" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('coalicion.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">transform</i>Coaliciones
+                    <a id="a-eleccion" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('elecciones.index') }}">
+                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">how_to_vote</i>Resultados
                     </a>
 
                     <a id="a-lideres" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('lider.index') }}">
@@ -99,8 +91,12 @@
                         <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">group_add</i>Simpatizantes
                     </a>
 
-                    <a id="a-eleccion" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('elecciones.index') }}">
-                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">how_to_vote</i>Resultados
+                    <a id="a-partido" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('partido.index') }}">
+                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">outlined_flag</i>Partidos
+                    </a>
+
+                    <a id="a-coalicion" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('coalicion.index') }}">
+                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">transform</i>Coaliciones
                     </a>
 
                     <a id="a-secciones" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('seccion.index') }}">
@@ -113,6 +109,10 @@
 
                     <a id="a-municipios" class="mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('municipio.index') }}">
                         <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">crop_free</i>Municipios
+                    </a>
+
+                    <a id="a-anios" class=" hidden mdl-navigation__link mdl-color-text--blue-grey-600" href="{{ route('anio.index') }}">
+                        <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">timeline</i>Años
                     </a>
                 </nav>
             </div>
