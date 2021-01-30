@@ -81,12 +81,13 @@
             </header>
             <div class="demo-drawer mdl-layout__drawer">
                 <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-900">
+                    
                     <a id="a-inicio" class="{{ $cssNavLinks }}" href="{{ route('home') }}">
                         <i class="{{ $cssMicons }}" role="presentation">equalizer</i>Historico
                     </a>
 
                     <a id="a-eleccion" class="{{ $cssNavLinks }}" href="{{ route('elecciones.index') }}">
-                        <i class="{{ $cssMicons }}" role="presentation">query_stats</i>Resultados
+                        <i class="{{ $cssMicons }}" role="presentation">playlist_add_check</i>Resultados
                     </a>
 
                     <a id="a-lideres" class="{{ $cssNavLinks }}" href="{{ route('lider.index') }}">
