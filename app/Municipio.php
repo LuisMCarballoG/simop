@@ -10,10 +10,19 @@ class Municipio extends Model
 
     protected $table = 'municipio';
 
-    protected $fillable = ['id', 'entidad_id', 'name'];
+    protected $fillable = 
+    [
+    	'id',
+    	'entidad_id',
+    	'name'
+    ];
 
     public function secciones(){
         return $this->hasMany('App\Seccion', 'municipio_id', 'id');
+    }
+
+    public function Colonias(){
+        return $this->hasMany('App\Colonia', 'municipio_id', 'id');
     }
 
     public function Entidad(){

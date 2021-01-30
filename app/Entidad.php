@@ -10,7 +10,13 @@ class Entidad extends Model
 
     protected $table = 'entidad';
 
-    protected $fillable = ['id', 'name'];
+    protected $fillable = 
+    [
+    	'id',
+    	'name',
+    	'name_short',
+    	'oculto',
+    ];
 
     public function Municipios(){
     	return $this->hasMany('App\Municipio', 'entidad_id', 'id');

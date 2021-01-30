@@ -10,7 +10,8 @@ class Anio extends Model
     
     protected $table = 'anio';
 
-    protected $fillable = [
+    protected $fillable = 
+    [
         'id',
         'oculto'
     ];
@@ -23,5 +24,10 @@ class Anio extends Model
     public function adscritos()
     {
         return $this->hasMany('App\Adscrito',  'anio_id', 'id');
+    }
+
+    public function Secciones()
+    {
+        return $this->hasMany('App\Seccion',  'anio_id', 'id');
     }
 }

@@ -10,15 +10,33 @@ class Seccion extends Model
 
     protected $table = 'seccion';
 
-    protected $fillable = [
+    protected $fillable = 
+    [
         'id',
+        'anio_id',
         'municipio_id',
         'name',
-        'lista_nominal'
+        'oculto'
     ];
+
+    public function Anio(){
+        return $this->belongsTo('App\Anio', 'anio_id', 'id');
+    }
 
     public function municipio(){
         return $this->belongsTo('App\Municipio', 'municipio_id', 'id');
+    }
+
+    public function Rutas(){
+        return $this->belongsToMany('App\Ruta', 'ruta_seccion');
+    }
+
+    public function Colonias(){
+        return $this->belongsToMany('App\Colonia', 'colonia_seccion');
+    }
+
+    public function Casillas(){
+        return $this->hasMany('App\Casillas', 'seccion_id', 'id');
     }
 
     public function adscritos(){
